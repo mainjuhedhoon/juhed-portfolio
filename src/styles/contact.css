@@ -1,0 +1,135 @@
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section {
+  padding: 100px 24px;
+  background: #0a0a0a;
+}
+
+.contact-section .section-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-section .section-heading {
+  margin-bottom: 50px;
+}
+
+.contact-section .section-heading > p {
+  color: #00d4ff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.contact-section .section-heading h2 {
+  color: #ffffff;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.contact-section .section-heading h2 span {
+  color: #00d4ff;
+}
+
+/* =========================
+   CONTACT CONTENT
+========================= */
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-text {
+  max-width: 600px;
+}
+
+.contact-text p {
+  color: #999999;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.contact-text .primary-btn {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* =========================
+   CONTACT DETAILS
+========================= */
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-item {
+  padding: 22px 24px;
+  background: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateX(5px);
+  border-color: rgba(0, 212, 255, 0.4);
+}
+
+.contact-item span {
+  display: block;
+  color: #00d4ff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+.contact-item a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+  word-break: break-word;
+}
+
+.contact-item a:hover {
+  color: #00d4ff;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 80px 20px;
+  }
+
+  .contact-section .section-heading {
+    margin-bottom: 35px;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .contact-text p {
+    font-size: 15px;
+  }
+
+  .contact-item {
+    padding: 20px;
+  }
+}

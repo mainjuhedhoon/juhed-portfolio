@@ -1,0 +1,176 @@
+/* =========================
+   EXPERIENCE SECTION
+========================= */
+
+.experience-section {
+  padding: 100px 24px;
+  background: #0a0a0a;
+}
+
+.experience-section .section-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.experience-section .section-heading {
+  margin-bottom: 50px;
+}
+
+.experience-section .section-heading > p {
+  color: #00d4ff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.experience-section .section-heading h2 {
+  color: #ffffff;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.experience-section .section-heading h2 span {
+  color: #00d4ff;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.experience-section .timeline-item {
+  position: relative;
+  padding-left: 45px;
+}
+
+.experience-section .timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  bottom: 0;
+  width: 2px;
+  background: rgba(0, 212, 255, 0.25);
+}
+
+.experience-section .timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 8px;
+
+  width: 18px;
+  height: 18px;
+
+  background: #00d4ff;
+  border: 4px solid #0a0a0a;
+  border-radius: 50%;
+
+  box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.12);
+}
+
+/* =========================
+   EXPERIENCE CARD
+========================= */
+
+.experience-section .timeline-card {
+  padding: 30px;
+
+  background: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+
+  transition: all 0.3s ease;
+}
+
+.experience-section .timeline-card:hover {
+  transform: translateX(6px);
+  border-color: rgba(0, 212, 255, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.experience-section .timeline-date {
+  display: inline-block;
+
+  color: #00d4ff;
+  font-size: 13px;
+  font-weight: 600;
+
+  margin-bottom: 12px;
+}
+
+.experience-section .timeline-card h3 {
+  color: #ffffff;
+  font-size: 23px;
+  margin: 0 0 6px;
+}
+
+.experience-section .timeline-card h4 {
+  color: #aaaaaa;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 18px;
+}
+
+.experience-section .timeline-card p {
+  color: #999999;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0 0 20px;
+}
+
+/* Technology Tags */
+
+.experience-section .project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+}
+
+.experience-section .project-tech span {
+  padding: 6px 10px;
+
+  background: rgba(0, 212, 255, 0.06);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  border-radius: 5px;
+
+  color: #00d4ff;
+  font-size: 12px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 80px 20px;
+  }
+
+  .experience-section .section-heading {
+    margin-bottom: 35px;
+  }
+
+  .experience-section .timeline-item {
+    padding-left: 35px;
+  }
+
+  .experience-section .timeline-item::before {
+    left: 6px;
+  }
+
+  .experience-section .timeline-dot {
+    left: -1px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .experience-section .timeline-card {
+    padding: 24px;
+  }
+
+  .experience-section .timeline-card h3 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0a0a0a;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: #00d4ff;
+  color: #000000;
+}
+/* Global Polish */
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+::selection {
+  background: #00d4ff;
+  color: #000;
+}
+
+/* Smooth button feel */
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Mobile overflow fix */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Better focus accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #00d4ff;
+  outline-offset: 4px;
+}

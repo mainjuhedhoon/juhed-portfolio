@@ -1,0 +1,110 @@
+/* =========================
+   EDUCATION SECTION
+========================= */
+
+.education-section {
+  padding: 100px 24px;
+  background: #0d0d0d;
+}
+
+.education-section .section-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.education-section .section-heading {
+  margin-bottom: 50px;
+}
+
+.education-section .section-heading > p {
+  color: #00d4ff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.education-section .section-heading h2 {
+  color: #ffffff;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.education-section .section-heading h2 span {
+  color: #00d4ff;
+}
+
+/* =========================
+   EDUCATION GRID
+========================= */
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.education-card {
+  padding: 30px;
+
+  background: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+
+  transition: all 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 212, 255, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.education-card > span {
+  display: inline-block;
+  color: #00d4ff;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.education-card h3 {
+  color: #ffffff;
+  font-size: 24px;
+  margin: 0 0 8px;
+}
+
+.education-card p {
+  color: #999999;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .education-section {
+    padding: 80px 20px;
+  }
+
+  .education-section .section-heading {
+    margin-bottom: 35px;
+  }
+
+  .education-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .education-card {
+    padding: 24px;
+  }
+
+  .education-card h3 {
+    font-size: 21px;
+  }
+}
