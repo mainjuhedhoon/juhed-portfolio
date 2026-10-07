@@ -51,10 +51,8 @@
 
 .project-card {
   position: relative;
-  display: flex;
-  gap: 25px;
+  overflow: hidden;
 
-  padding: 30px;
   background: #121212;
 
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -69,16 +67,60 @@
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
 }
 
+/* =========================
+   PROJECT IMAGE
+========================= */
+
+.project-image {
+  width: 100%;
+  height: 210px;
+
+  overflow: hidden;
+
+  background: #0a0a0a;
+
+  border-bottom: 1px solid rgba(0, 212, 255, 0.12);
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.04);
+}
+
+/* =========================
+   PROJECT INFO
+========================= */
+
+.project-info {
+  display: flex;
+  gap: 20px;
+
+  padding: 28px 30px 30px;
+}
+
 /* Project Number */
 
 .project-number {
   color: #00d4ff;
   font-size: 15px;
   font-weight: 700;
+
   min-width: 30px;
 }
 
-/* Project Content */
+/* =========================
+   PROJECT CONTENT
+========================= */
 
 .project-content {
   flex: 1;
@@ -87,6 +129,7 @@
 .project-content h3 {
   color: #ffffff;
   font-size: 21px;
+
   margin: 0 0 12px;
 }
 
@@ -94,15 +137,19 @@
   color: #999999;
   font-size: 14px;
   line-height: 1.7;
+
   margin: 0 0 20px;
 }
 
-/* Technologies */
+/* =========================
+   TECHNOLOGIES
+========================= */
 
 .project-tech {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+
   margin-bottom: 22px;
 }
 
@@ -110,19 +157,32 @@
   padding: 6px 10px;
 
   background: rgba(0, 212, 255, 0.06);
+
   border: 1px solid rgba(0, 212, 255, 0.15);
+
   border-radius: 5px;
 
   color: #00d4ff;
+
   font-size: 12px;
 }
 
-/* GitHub Link */
+/* =========================
+   PROJECT LINKS
+========================= */
+
+.project-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
 .project-link {
   display: inline-block;
 
   color: #ffffff;
+
   text-decoration: none;
 
   font-size: 14px;
@@ -134,6 +194,28 @@
 .project-link:hover {
   color: #00d4ff;
   transform: translateX(3px);
+}
+
+.live-link {
+  color: #00d4ff;
+}
+
+.live-link:hover {
+  color: #ffffff;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image {
+    height: 230px;
+  }
 }
 
 /* =========================
@@ -150,14 +232,26 @@
     gap: 18px;
   }
 
-  .project-card {
+  .project-image {
+    height: 200px;
+  }
+
+  .project-info {
     padding: 24px;
     gap: 18px;
   }
 }
 
+/* =========================
+   SMALL MOBILE
+========================= */
+
 @media (max-width: 480px) {
-  .project-card {
+  .project-image {
+    height: 180px;
+  }
+
+  .project-info {
     flex-direction: column;
     gap: 10px;
   }
@@ -165,18 +259,12 @@
   .project-number {
     min-width: auto;
   }
-}
-.project-links {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
 
-.live-link {
-  color: #00d4ff;
-}
+  .project-content h3 {
+    font-size: 19px;
+  }
 
-.live-link:hover {
-  color: #ffffff;
+  .project-content p {
+    font-size: 13px;
+  }
 }

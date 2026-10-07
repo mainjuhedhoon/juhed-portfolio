@@ -2,11 +2,13 @@ import "./../styles/projects.css";
 
 const projects = [
   {
-    title: "E-Commerce Backend",
+    title: "Juhed Store",
     description:
-      "A RESTful e-commerce backend with authentication, products, categories, cart and order management.",
-    tech: ["Node.js", "Express.js", "MongoDB", "JWT"],
-    github: "https://github.com/mainjuhedhoon/backend-crud",
+      "A full-stack e-commerce application with product browsing, categories, authentication, cart and order management.",
+    tech: ["React", "Node.js", "Express.js", "MongoDB", "JWT"],
+    github: "https://github.com/mainjuhedhoon/juhed-store-frontend",
+    live: "https://juhed-store-frontend.vercel.app/",
+    image: "/images/projects/juhed-store.png",
   },
   {
     title: "ShopSphere",
@@ -14,13 +16,16 @@ const projects = [
       "A modern e-commerce frontend with product browsing, product details, cart and responsive UI.",
     tech: ["React", "JavaScript", "API", "CSS"],
     github: "#",
+    image: "/images/projects/shopsphere.png",
   },
   {
     title: "Student Management System",
     description:
       "A student management application with CRUD operations and state management.",
     tech: ["React", "Redux", "JSON Server"],
-    github: "https://github.com/mainjuhedhoon/student-management-system",
+    github:
+      "https://github.com/mainjuhedhoon/student-management-system",
+    image: "/images/projects/student-management.png",
   },
   {
     title: "AudioVault",
@@ -29,6 +34,7 @@ const projects = [
     tech: ["React", "Node.js", "Express", "MongoDB"],
     github: "https://github.com/mainjuhedhoon/audiovault",
     live: "https://audiovault-delta.vercel.app/",
+    image: "/images/projects/audiovault.png",
   },
 ];
 
@@ -50,47 +56,59 @@ function Projects() {
           {projects.map((project, index) => (
             <div className="project-card" key={project.title}>
 
-              <div className="project-number">
-                0{index + 1}
+              {/* Project Image */}
+              <div className="project-image">
+                <img
+                  src={project.image}
+                  alt={`${project.title} project preview`}
+                />
               </div>
 
-              <div className="project-content">
+              <div className="project-info">
 
-                <h3>{project.title}</h3>
-
-                <p>{project.description}</p>
-
-                <div className="project-tech">
-                  {project.tech.map((tech) => (
-                    <span key={tech}>
-                      {tech}
-                    </span>
-                  ))}
+                <div className="project-number">
+                  0{index + 1}
                 </div>
 
-                <div className="project-links">
+                <div className="project-content">
 
-                  {project.github !== "#" && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link"
-                    >
-                      GitHub ↗
-                    </a>
-                  )}
+                  <h3>{project.title}</h3>
 
-                  {project.live && (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link live-link"
-                    >
-                      Live Demo ↗
-                    </a>
-                  )}
+                  <p>{project.description}</p>
+
+                  <div className="project-tech">
+                    {project.tech.map((tech) => (
+                      <span key={tech}>
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="project-links">
+
+                    {project.github !== "#" && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-link"
+                      >
+                        GitHub ↗
+                      </a>
+                    )}
+
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-link live-link"
+                      >
+                        Live Demo ↗
+                      </a>
+                    )}
+
+                  </div>
 
                 </div>
 

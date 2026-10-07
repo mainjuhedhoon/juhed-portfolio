@@ -19,21 +19,26 @@ function Navbar() {
         <div className={`nav-links ${menuOpen ? "active" : ""}`}>
           <a href="#home" onClick={closeMenu}>Home</a>
           <a href="#about" onClick={closeMenu}>About</a>
-          <a href="#skills" onClick={closeMenu}>Skills</a>
           <a href="#projects" onClick={closeMenu}>Projects</a>
-          <a href="#experience" onClick={closeMenu}>Experience</a>
+          <a href="#experience" onClick={closeMenu}>Journey</a>
           <a href="#education" onClick={closeMenu}>Education</a>
           <a href="#contact" onClick={closeMenu}>Contact</a>
         </div>
 
-        <a href="#contact" className="nav-button">
+        <a
+          href="#contact"
+          className="nav-button"
+          onClick={closeMenu}
+        >
           Let's Talk
+          <span>↗</span>
         </a>
 
         <button
           className={`menu-toggle ${menuOpen ? "open" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle navigation"
+          aria-expanded={menuOpen}
         >
           <span></span>
           <span></span>

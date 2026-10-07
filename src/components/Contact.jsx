@@ -7,66 +7,86 @@ function Contact() {
 
         <div className="section-heading">
           <p>GET IN TOUCH</p>
-          <h2>Let's build something <span>great.</span></h2>
+
+          <h2>
+            Let's build something <span>great.</span>
+          </h2>
         </div>
 
         <div className="contact-content">
 
-          <div className="contact-text">
-            <p>
-              I'm currently open to internship opportunities, freelance
-              projects and exciting web development collaborations.
-            </p>
+          <div className="contact-intro">
+
+            <span className="contact-number">01</span>
+
+            <h3>
+              Have an idea or opportunity?
+            </h3>
 
             <p>
-              Have a project or opportunity in mind? Feel free to reach out.
-              I'd be happy to connect.
+              I'm open to internships, freelance projects and
+              web development opportunities.
             </p>
 
             <a
               href="mailto:juhedmultani85@gmail.com"
-              className="primary-btn"
+              className="contact-email-btn"
             >
               Send Me an Email
+              <span>↗</span>
             </a>
+
           </div>
 
           <div className="contact-details">
 
-            <div className="contact-item">
-              <span>Email</span>
+            <a
+              href="mailto:juhedmultani85@gmail.com"
+              className="contact-item"
+            >
+              <div>
+                <small>EMAIL</small>
+                <strong>juhedmultani85@gmail.com</strong>
+              </div>
 
-              <a href="mailto:juhedmultani85@gmail.com">
-                juhedmultani85@gmail.com
-              </a>
-            </div>
+              <span>↗</span>
+            </a>
 
-            <div className="contact-item">
-              <span>GitHub</span>
+            <a
+              href="https://github.com/mainjuhedhoon"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-item"
+            >
+              <div>
+                <small>GITHUB</small>
+                <strong>github.com/mainjuhedhoon</strong>
+              </div>
 
-              <a
-                href="https://github.com/mainjuhedhoon"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                github.com/mainjuhedhoon
-              </a>
-            </div>
+              <span>↗</span>
+            </a>
 
-            <div className="contact-item">
-              <span>LinkedIn</span>
+            <a
+              href="https://www.linkedin.com/in/juhed-multani-b2057427a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-item"
+            >
+              <div>
+                <small>LINKEDIN</small>
+                <strong>LinkedIn Profile</strong>
+              </div>
 
-              <a
-                href="https://www.linkedin.com/in/juhed-multani-b2057427a/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LinkedIn Profile ↗
-              </a>
-            </div>
+              <span>↗</span>
+            </a>
 
           </div>
 
+        </div>
+
+        <div className="contact-bottom">
+          <span>AVAILABLE FOR OPPORTUNITIES</span>
+          <span>JUHED MULTANI © 2026</span>
         </div>
 
       </div>

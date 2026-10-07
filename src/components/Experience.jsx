@@ -1,4 +1,35 @@
 import "./../styles/experience.css";
+
+const journey = [
+  {
+    number: "01",
+    date: "2025 — 2026",
+    title: "Full Stack Web Development",
+    company: "Red & White Multimedia Education",
+    description:
+      "Built a strong foundation in modern web development through practical projects and hands-on learning.",
+    tech: ["HTML", "CSS", "JavaScript", "React", "Node.js", "MongoDB"],
+  },
+  {
+    number: "02",
+    date: "2026 — Present",
+    title: "Web Development Intern",
+    company: "Search Engine Monks",
+    description:
+      "Working on real-world web development projects using React, Node.js and WordPress while gaining professional development experience.",
+    tech: ["React.js", "Node.js", "WordPress", "JavaScript", "HTML", "CSS"],
+  },
+  {
+    number: "03",
+    date: "Ongoing",
+    title: "Personal Projects",
+    company: "Independent Development",
+    description:
+      "Building and deploying full-stack applications to strengthen development skills and explore new technologies.",
+    tech: ["Juhed Store", "AudioVault", "Git", "GitHub"],
+  },
+];
+
 function Experience() {
   return (
     <section className="experience-section" id="experience">
@@ -6,35 +37,52 @@ function Experience() {
 
         <div className="section-heading">
           <p>MY JOURNEY</p>
-          <h2>Experience & <span>learning.</span></h2>
+
+          <h2>
+            Experience & <span>learning.</span>
+          </h2>
         </div>
 
-       <div className="timeline-item">
-  <div className="timeline-dot"></div>
+        <div className="journey-list">
 
-  <div className="timeline-card">
-    <span className="timeline-date">
-      2026 — Present
-    </span>
+          {journey.map((item) => (
+            <div className="journey-item" key={item.number}>
 
-    <h3>Web Development Intern</h3>
-    <h4>Search Engine Monks</h4>
+              <div className="journey-marker">
+                <span>{item.number}</span>
+              </div>
 
-    <p>
-      Working on web development tasks and real-world projects while
-      gaining practical experience in modern frontend and backend
-      development technologies.
-    </p>
+              <div className="journey-card">
 
-    <div className="project-tech">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-      <span>React.js</span>
-      <span>Node.js</span>
-    </div>
-  </div>
-</div>
+                <div className="journey-top">
+                  <span className="journey-date">
+                    {item.date}
+                  </span>
+
+                  <span className="journey-index">
+                    {item.number}
+                  </span>
+                </div>
+
+                <h3>{item.title}</h3>
+
+                <h4>{item.company}</h4>
+
+                <p>{item.description}</p>
+
+                <div className="journey-tech">
+                  {item.tech.map((tech) => (
+                    <span key={tech}>{tech}</span>
+                  ))}
+                </div>
+
+              </div>
+
+            </div>
+          ))}
+
+        </div>
+
       </div>
     </section>
   );

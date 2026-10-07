@@ -1,127 +1,289 @@
-/* =========================
-   ABOUT SECTION
-========================= */
-
 .about-section {
-  padding: 100px 24px;
-  background: #0d0d0d;
+  padding: 100px 6vw;
+  position: relative;
+  overflow: hidden;
+  background: #050505;
 }
 
-.section-container {
-  max-width: 1200px;
+.about-container {
+  max-width: 1250px;
   margin: 0 auto;
 }
 
-.section-heading {
-  margin-bottom: 45px;
+/* =========================
+   HEADING
+========================= */
+
+.about-heading {
+  margin-bottom: 55px;
 }
 
-.section-heading > p {
+.about-heading p {
+  margin: 0 0 12px;
+
   color: #00d4ff;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-}
 
-.section-heading h2 {
-  color: #ffffff;
-  font-size: clamp(32px, 5vw, 48px);
-  line-height: 1.2;
-  margin: 0;
+  font-size: 10px;
   font-weight: 700;
+  letter-spacing: 2px;
 }
 
-.section-heading h2 span {
-  color: #00d4ff;
+.about-heading h2 {
+  margin: 0;
+
+  color: #eeeeee;
+
+  font-size: clamp(38px, 5vw, 60px);
+  line-height: 1.05;
+
+  letter-spacing: -2.5px;
 }
 
-.about-content {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.about-text {
-  max-width: 650px;
-}
-
-.about-text p {
-  color: #999999;
-  font-size: 16px;
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-
-.about-text .primary-btn {
-  margin-top: 10px;
+.about-heading h2 span {
+  color: #555555;
 }
 
 /* =========================
-   STATS
+   CONTENT
 ========================= */
 
-.about-stats {
+.about-content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
+
+  grid-template-columns: 1.1fr 0.9fr;
+
+  gap: 80px;
+
+  align-items: center;
 }
 
-.stat-card {
-  padding: 28px 22px;
-  background: #121212;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
+/* =========================
+   INTRO
+========================= */
+
+.about-intro {
+  position: relative;
+  padding-left: 35px;
+}
+
+.about-number {
+  position: absolute;
+
+  left: 0;
+  top: 4px;
+
+  color: #00d4ff;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.about-intro h3 {
+  max-width: 600px;
+
+  margin: 0 0 18px;
+
+  color: #dddddd;
+
+  font-size: clamp(25px, 3vw, 36px);
+  line-height: 1.25;
+
+  letter-spacing: -1px;
+}
+
+.about-intro p {
+  max-width: 480px;
+
+  margin: 0 0 25px;
+
+  color: #707070;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.about-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
+  color: #00d4ff;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-decoration: none;
+
   transition: 0.3s ease;
 }
 
-.stat-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(0, 212, 255, 0.4);
+.about-btn span {
+  font-size: 16px;
 }
 
-.stat-card h3 {
+.about-btn:hover {
+  color: #ffffff;
+}
+
+.about-btn:hover span {
+  transform: translate(3px, -3px);
+}
+
+/* =========================
+   INFO CARDS
+========================= */
+
+.about-info {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.info-card {
+  display: grid;
+
+  grid-template-columns: 35px 1fr 20px;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 19px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: 0.3s ease;
+}
+
+.info-card > span {
+  color: #3f3f3f;
+
+  font-size: 9px;
+}
+
+.info-card small {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #505050;
+
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.info-card strong {
+  color: #bdbdbd;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.info-card > b {
+  color: #444;
+
+  font-size: 15px;
+
+  transition: 0.3s ease;
+}
+
+.info-card:hover {
+  padding-left: 7px;
+}
+
+.info-card:hover strong {
   color: #00d4ff;
-  font-size: 32px;
-  margin-bottom: 8px;
 }
 
-.stat-card p {
-  color: #999999;
-  font-size: 14px;
-  margin: 0;
+.info-card:hover > b {
+  color: #00d4ff;
+  transform: translate(3px, -3px);
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.about-skills {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 65px;
+
+  padding-top: 22px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.skills-title {
+  margin-right: 10px;
+
+  color: #444;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.skill-pill {
+  padding: 7px 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 50px;
+
+  color: #777;
+
+  font-size: 10px;
+
+  transition: 0.3s ease;
+}
+
+.skill-pill:hover {
+  color: #00d4ff;
+
+  border-color: rgba(0, 212, 255, 0.3);
+
+  transform: translateY(-2px);
 }
 
 /* =========================
    MOBILE
 ========================= */
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .about-section {
     padding: 80px 20px;
   }
 
   .about-content {
     grid-template-columns: 1fr;
-    gap: 40px;
+
+    gap: 45px;
   }
 
-  .about-stats {
-    grid-template-columns: repeat(2, 1fr);
+  .about-heading {
+    margin-bottom: 40px;
   }
 
-  .stat-card {
-    padding: 22px 16px;
+  .about-heading h2 {
+    font-size: 40px;
   }
 
-  .stat-card h3 {
-    font-size: 26px;
+  .about-intro {
+    padding-left: 30px;
   }
-}
 
-@media (max-width: 480px) {
-  .about-stats {
-    grid-template-columns: 1fr;
+  .about-skills {
+    flex-wrap: wrap;
+    margin-top: 45px;
+  }
+
+  .skills-title {
+    width: 100%;
+    margin-bottom: 5px;
   }
 }

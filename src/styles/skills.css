@@ -65,23 +65,49 @@
   margin: 0 0 20px;
 }
 
+/* =========================
+   SKILL LIST
+========================= */
+
 .skill-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.skill-list span {
+/* Individual skill badge */
+
+.skill-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
   padding: 8px 12px;
+
   background: rgba(0, 212, 255, 0.06);
   border: 1px solid rgba(0, 212, 255, 0.15);
-  border-radius: 6px;
+  border-radius: 7px;
+
   color: #00d4ff;
   font-size: 13px;
+  font-weight: 500;
+
   transition: all 0.3s ease;
 }
 
-.skill-list span:hover {
+/* Real technology logo */
+
+.skill-logo {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Skill hover */
+
+.skill-item:hover {
   background: rgba(0, 212, 255, 0.12);
   border-color: rgba(0, 212, 255, 0.4);
   transform: translateY(-2px);
@@ -117,8 +143,14 @@
     gap: 8px;
   }
 
-  .skill-list span {
+  .skill-item {
     font-size: 12px;
     padding: 7px 10px;
+    gap: 7px;
+  }
+
+  .skill-logo {
+    width: 20px;
+    height: 20px;
   }
 }
